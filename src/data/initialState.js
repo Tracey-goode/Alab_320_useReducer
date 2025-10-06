@@ -120,3 +120,5 @@ const initialState = [
         "completed": true
     }
   ];
+
+  export default initialState;

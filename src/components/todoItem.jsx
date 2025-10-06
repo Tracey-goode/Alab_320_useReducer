@@ -7,10 +7,12 @@ export default function TodoItem({ todo, dispatch }) {
 
     const handleSave = () => {
         dispatch({ type: "Edit", id: todo.id, title: editText });
+        // sets state back to false, turns off edit mode
         setIsEditing(false);
     };
 
     return (
+        //if todo is complete add CSS class
         <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
             <div className="left">
                 <input
@@ -33,7 +35,7 @@ export default function TodoItem({ todo, dispatch }) {
                     </button>
                 ) : (
                     <>
-                        <button className="editbutton" onClick={() => setIsEditing(true)}>
+                        <button className="editButton" onClick={() => setIsEditing(true)}>
                             Edit
                         </button>
                         <button
