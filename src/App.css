@@ -1,17 +1,21 @@
 /* General Layout */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3f4f6;
+  height: 100%;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times";
+  background-color: #a8c2f4;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 480px;
+  max-width: 500px;
   margin: 40px auto;
   background: white;
-  padding: 20px 25px;
-  border-radius: 12px;
+  padding: 20px 25px 20px;
+  border-radius:100px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -26,6 +30,7 @@ body {
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
+  
 }
 
 .input {
