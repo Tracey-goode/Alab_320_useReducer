@@ -22,10 +22,15 @@ function App() {
           type="Text"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)} placeholder="Add New!" className="input" />
-        <button>
-        
+        <button type="submit" className="addButton">
+          Add
         </button>
       </form>
+      <ul className="list">
+        {todos.map((todo) => (
+          <TodoItem key={todo.id} todo={todo} dispatch={dispatch} />
+        ))}
+      </ul>
     </div>
   )
 }
