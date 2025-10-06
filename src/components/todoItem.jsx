@@ -21,7 +21,7 @@ export default function TodoItem({ todo, dispatch }) {
                     <input
                         className="edit-input"
                         value={editText}
-                        onChange={(e) => setEditText(e.target.value)} /> 
+                        onChange={(e) => setEditText(e.target.value)} />
                 ) : (
                     <span>{todo.title}</span>
                 )}
@@ -32,11 +32,19 @@ export default function TodoItem({ todo, dispatch }) {
                         Save
                     </button>
                 ) : (
-                    
-                )
+                    <>
+                        <button className="editbutton" onClick={() => setIsEditing(true)}>
+                            Edit
+                        </button>
+                        <button
+                            className={`deleteButton ${!todo.completed ? "disabled" : ""}`}
+                            onClick={() => dispatch({ type: "DeleteTodo", id: todo.id })}
+                            disabled={!todo.completed}>
+                            Delete
+                        </button>
+                    </>
                 )}
-
             </div>
         </li>
-    )
+    );
 }
