@@ -11,7 +11,13 @@ export function todoReducer(state, action){
             ];
         case "Toggle_todo":
             return state.map((todo) => 
-                todo.id === action.id ? { ...todo })
+                todo.id === action.id ? { ...todo, completed: !todo.completed} : todo
+            );
+        case "Edit_todo":
+            return state.map((todo) => 
+            todo.id === action.id ? { ...todo, title: action.title } : todo 
+            );
+        case "Delete_todo"
     }
     return state;
 }

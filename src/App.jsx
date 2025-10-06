@@ -1,6 +1,6 @@
 import { useReducer, useState } from 'react'
 import { todoReducer } from './components/todoreducer'
-import TodoItem from './components/TodoItem'
+import TodoItem from './components/todoItem'
 import initialState from './data/initialState'
 import './App.css';
 
